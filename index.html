@@ -1,0 +1,583 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>APOORV SAXENA | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100..900&family=Space+Grotesk:wght@100..900&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#474746",
+                        "error-container": "#93000a",
+                        "secondary-container": "#474746",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed-variant": "#454747",
+                        "outline": "#8e9192",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary": "#ffffff",
+                        "on-tertiary": "#303030",
+                        "primary-fixed": "#e2e2e2",
+                        "inverse-primary": "#5d5f5f",
+                        "background": "#000000",
+                        "primary-container": "#e2e2e2",
+                        "inverse-surface": "#e2e2e2",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-container": "#656464",
+                        "tertiary-fixed": "#e4e2e1",
+                        "secondary": "#c8c6c5",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "outline-variant": "#444748",
+                        "surface-tint": "#c6c6c7",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-primary-container": "#636565",
+                        "on-surface": "#e2e2e2",
+                        "surface-container": "#111111",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-variant": "#353535",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-on-surface": "#303030",
+                        "surface": "#000000",
+                        "on-background": "#e2e2e2",
+                        "surface-container-low": "#1b1b1b",
+                        "tertiary-container": "#e4e2e1",
+                        "on-surface-variant": "#c4c7c8",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary": "#ffffff",
+                        "on-secondary": "#313030",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#393939",
+                        "on-primary": "#000000",
+                        "surface-dim": "#131313",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#353535",
+                        "on-primary-fixed": "#1a1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "16px",
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "section-gap": "160px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "display-xl": ["Playfair Display"],
+                        "label-mono": ["Space Grotesk"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["Space Grotesk"],
+                        "body-md": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "130%", "fontWeight": "500"}],
+                        "display-xl": ["120px", {"lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "label-mono": ["12px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-lg": ["64px", {"lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-lg": ["20px", {"lineHeight": "160%", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["40px", {"lineHeight": "120%", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            cursor: none;
+            overflow-x: hidden;
+        }
+        
+        .grainy-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s;
+        }
+
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: all 0.15s ease-out;
+        }
+
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .perspective-card {
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            transition: transform 0.1s ease-out;
+            transform-style: preserve-3d;
+        }
+
+        .hero-title-char {
+            display: inline-block;
+            transform: translateY(110%);
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-loaded .hero-title-char {
+            transform: translateY(0);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .pill-badge {
+            border: 1px solid #333333;
+            padding: 4px 12px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333333;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary selection:text-background hero-loaded" data-mode="connect">
+<div class="grainy-overlay"></div>
+<div class="cursor-dot" id="cursor-dot"></div>
+<div class="cursor-outline" id="cursor-outline"></div>
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant/30 px-margin-desktop py-6 flex justify-between items-center">
+  <div class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">AS</div>
+  <div class="hidden md:flex gap-gutter font-label-mono text-label-mono">
+    <a class="text-on-surface-variant/60 hover:text-primary transition-colors duration-300" href="#about">About</a>
+    <a class="text-on-surface-variant/60 hover:text-primary transition-colors duration-300" href="#projects">Projects</a>
+    <a class="text-on-surface-variant/60 hover:text-primary transition-colors duration-300" href="#skills">Skills</a>
+    <a class="text-on-surface-variant/60 hover:text-primary transition-colors duration-300" href="#achievements">Achievements</a>
+    <a class="text-on-surface-variant/60 hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col justify-center px-margin-mobile md:px-margin-desktop pt-24 relative overflow-hidden" id="hero">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center h-full">
+    <div class="md:col-span-8 overflow-hidden">
+      <div class="hero-text-container">
+        <h1 class="font-display-xl text-[64px] md:text-display-xl text-primary leading-none mb-stack-md flex flex-wrap tracking-[0.1em]" id="hero-name">
+          <div class="flex flex-col">
+            <div class="flex flex-wrap">
+              <span class="hero-title-char" style="transition-delay: 0s;">A</span><span class="hero-title-char" style="transition-delay: 0.05s;">P</span><span class="hero-title-char" style="transition-delay: 0.1s;">O</span><span class="hero-title-char" style="transition-delay: 0.15s;">O</span><span class="hero-title-char" style="transition-delay: 0.2s;">R</span><span class="hero-title-char" style="transition-delay: 0.25s;">V</span>
+            </div>
+            <div class="flex flex-wrap">
+              <span class="hero-title-char" style="transition-delay: 0.3s;">S</span><span class="hero-title-char" style="transition-delay: 0.35s;">A</span><span class="hero-title-char" style="transition-delay: 0.4s;">X</span><span class="hero-title-char" style="transition-delay: 0.45s;">E</span><span class="hero-title-char" style="transition-delay: 0.5s;">N</span><span class="hero-title-char" style="transition-delay: 0.55s;">A</span>
+            </div>
+          </div>
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl reveal-up" style="transition-delay: 0.2s">
+          Full Stack Developer &amp; Competitive Programmer
+        </p>
+      </div>
+    </div>
+    <div class="md:col-span-4 perspective-card">
+      <div class="card-inner relative border-[1px] border-outline-variant p-4 aspect-[4/5] bg-surface-container/50">
+        <img alt="Apoorv Saxena Portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="./apoorv-image.jpg">
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-12 left-0 w-full overflow-hidden border-y border-outline-variant/20 py-4">
+    <div class="marquee">
+      <div class="marquee-content font-label-mono text-[14px] uppercase tracking-[0.3em] flex gap-stack-lg">
+        <span>Open to Opportunities • Full Stack • C++ • AI • Competitive Programmer • GDSC Mentor • SIH 2025 Leader • </span>
+        <span>Open to Opportunities • Full Stack • C++ • AI • Competitive Programmer • GDSC Mentor • SIH 2025 Leader • </span>
+        <span>Open to Opportunities • Full Stack • C++ • AI • Competitive Programmer • GDSC Mentor • SIH 2025 Leader • </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop" id="about">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+    <div class="md:col-span-5 reveal-up">
+      <div class="flex items-baseline">
+        <span class="font-display-xl text-[80px] md:text-[140px] text-primary" id="gpa-counter">8.7</span>
+        <span class="font-headline-md text-headline-md text-outline ml-4">GPA</span>
+      </div>
+      <p class="font-label-mono text-label-mono uppercase tracking-widest text-outline-variant mt-2">Current Standing</p>
+    </div>
+    <div class="md:col-span-7 flex flex-col justify-center reveal-up" style="transition-delay: 0.1s">
+      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-stack-lg">Driven by Complexity.</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant">
+        B.Tech CSE student at G.L. Bajaj Institute of Technology and Management (2023–2027). I build full-stack AI products, solve complex algorithmic problems, and lead teams to ship real-world software. My approach blends engineering rigor with a creative eye for seamless user experiences.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest" id="projects">
+  <div class="mb-stack-lg reveal-up">
+    <p class="font-label-mono text-label-mono text-outline-variant uppercase mb-4">Selected Works</p>
+    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Building the Future.</h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg mt-stack-lg">
+
+    <!-- Project Card 1: Recro AI -->
+    <div class="perspective-card reveal-up">
+      <div class="card-inner bg-surface-container border border-outline-variant p-stack-lg h-full flex flex-col group cursor-pointer hover:bg-surface-variant/10 transition-colors">
+        <div class="mb-stack-lg overflow-hidden">
+          <img class="w-full aspect-video object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvvujhZUWOoBDU5ApEMwQAawIdMTOSuKd0jWjHt4Kr9LCzIaLlIXCP5luaUg39vV88RIKn6e-p75_JTRdjVSiwyLILkJly1lfviLqvICMuEWLhl7mh0qct200dioz9wqrvO6q3kh5FE_dcKCAagNZZceLaLc8NmjUzHNjd-pktHBD5oz1Vw8oADSq7IlvOWXMEO8STOHWt9mz7HcOPtOITvfgrfPG2weVsBiR3WZ1JjvT0UmrcIDowtSV1ABjbnwMC-80t6-EgY4Y" alt="Recro AI Project">
+        </div>
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="font-headline-md text-headline-md">RECRO AI</h3>
+          <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <a href="https://github.com/Apoorv-Saxena08" target="_blank" rel="noopener noreferrer" class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 hover:bg-primary hover:text-background transition-all">GitHub</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 hover:bg-primary hover:text-background transition-all">Live ↗</a>
+          </div>
+        </div>
+        <p class="font-body-md text-on-surface-variant flex-grow mb-stack-lg">
+          AI-powered mock interview platform with resume-based question generation using Gemini 2.5 Flash. Voice-based interaction, real-time evaluation, and downloadable reports. 10+ active users, 20+ interviews conducted.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="pill-badge">REACT</span>
+          <span class="pill-badge">NODE.JS</span>
+          <span class="pill-badge">MONGODB</span>
+          <span class="pill-badge">FIREBASE</span>
+          <span class="pill-badge">GEMINI API</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card 2: WanderLust -->
+    <div class="perspective-card reveal-up" style="transition-delay: 0.1s">
+      <div class="card-inner bg-surface-container border border-outline-variant p-stack-lg h-full flex flex-col group cursor-pointer hover:bg-surface-variant/10 transition-colors">
+        <div class="mb-stack-lg overflow-hidden">
+          <img class="w-full aspect-video object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATJFNJ_HtnTPJB6DF2toLiKNFB4BnShuiZ6eplp3sHohYRl56QZScgpahtV0iqCZ-pSx1eRY2pOwGRU1PGtRyXBmQXf1k-DXAd9eygBRKweWgrwUlFkLhlRc55tvy7oFnoNpaLz_LTCPtLmA9-ZTVBAQgzbnkAo0F95o-aFiXUZZSUE4cX6psnqH982n4K0FK7NzEFCFB3zphEV9ktN2MBlIbs_xapWpOEli1rpVZ_Qs7DW-wgJbE3IgN8g_VdW0w_K7qNapGeKdk" alt="WanderLust Project">
+        </div>
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="font-headline-md text-headline-md">WANDERLUST</h3>
+          <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <a href="https://github.com/Apoorv-Saxena08" target="_blank" rel="noopener noreferrer" class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 hover:bg-primary hover:text-background transition-all">GitHub</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 hover:bg-primary hover:text-background transition-all">Live ↗</a>
+          </div>
+        </div>
+        <p class="font-body-md text-on-surface-variant flex-grow mb-stack-lg">
+          Airbnb-inspired full-stack travel booking platform with property listings and CRUD operations. RESTful APIs, MVC architecture, deployed and production-ready.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="pill-badge">NODE.JS</span>
+          <span class="pill-badge">EXPRESS.JS</span>
+          <span class="pill-badge">MONGODB</span>
+          <span class="pill-badge">EJS</span>
+          <span class="pill-badge">REST APIs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card 3: PRAVARTAK -->
+    <div class="perspective-card reveal-up" style="transition-delay: 0.2s">
+      <div class="card-inner bg-surface-container border border-outline-variant p-stack-lg h-full flex flex-col group cursor-pointer hover:bg-surface-variant/10 transition-colors">
+        <div class="mb-stack-lg overflow-hidden">
+          <img class="w-full aspect-video object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVzbjg-YtaLmJnmZVygMVWOHsZMl07gRuv2eLq2vYjYdcEw51Y3u37xjsPZTLkYN0xXRnIANmVcdvTJXx2v1D-138Qvb_F-WHHxijyo_Jhx-gNWhRcJJlPGr5qtniGa2sar2XPwtoUvUORBgJ2kfk9EQehieOhOOTqiAPwM2tSftzYHXGAqreC1ktT6VuholFemJzC3xuIbjlYLphs468SHdwA8c39U9u5cl5DG-Sxyvdoj0kqKfmZHyaNFOi5zGSj3FirNFNNDfs" alt="PRAVARTAK Project">
+        </div>
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="font-headline-md text-headline-md">PRAVARTAK</h3>
+          <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <a href="https://github.com/Apoorv-Saxena08" target="_blank" rel="noopener noreferrer" class="font-label-mono text-label-mono border border-outline-variant px-3 py-1 hover:bg-primary hover:text-background transition-all">GitHub</a>
+          </div>
+        </div>
+        <p class="font-body-md text-on-surface-variant flex-grow mb-stack-lg">
+          SIH 2025 — Early warning system to identify students at dropout risk via attendance, academics, fee and activity data. Color-coded alerts (Green/Yellow/Red) for mentor intervention. Team Leader of 6.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="pill-badge">MONGODB</span>
+          <span class="pill-badge">REST APIs</span>
+          <span class="pill-badge">BOOTSTRAP</span>
+          <span class="pill-badge">EJS</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop overflow-hidden" id="skills">
+  <div class="mb-stack-lg reveal-up">
+    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Tech Stack.</h2>
+  </div>
+  <div class="flex flex-col gap-stack-lg reveal-up">
+
+    <div class="grid grid-cols-1 md:grid-cols-4 border-t border-outline-variant py-8 hover:bg-surface-container transition-all group">
+      <span class="font-label-mono text-outline-variant uppercase">Languages</span>
+      <div class="md:col-span-3 flex flex-wrap gap-4">
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">C++</span>
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">JavaScript (ES6+)</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 border-t border-outline-variant py-8 hover:bg-surface-container transition-all group">
+      <span class="font-label-mono text-outline-variant uppercase">Frameworks</span>
+      <div class="md:col-span-3 flex flex-wrap gap-4">
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">Node.js</span>
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">Express.js</span>
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">React</span>
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">EJS</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 border-t border-outline-variant py-8 hover:bg-surface-container transition-all group">
+      <span class="font-label-mono text-outline-variant uppercase">Tools &amp; DB</span>
+      <div class="md:col-span-3 flex flex-wrap gap-4">
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">Git</span>
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">GitHub</span>
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">MongoDB</span>
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">MySQL</span>
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">VS Code</span>
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">Notion</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 border-t border-outline-variant py-8 hover:bg-surface-container transition-all group">
+      <span class="font-label-mono text-outline-variant uppercase">Concepts</span>
+      <div class="md:col-span-3 flex flex-wrap gap-4">
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">Data Structures</span>
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">Algorithms</span>
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">OOP</span>
+        <span class="font-headline-md group-hover:text-primary text-on-surface-variant transition-colors">REST APIs</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Achievements Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container" id="achievements">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg items-end mb-stack-lg">
+    <div class="md:col-span-8 reveal-up">
+      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Metric Driven Success.</h2>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-gutter mt-stack-lg">
+    <div class="reveal-up border-l border-outline-variant pl-6 py-4" style="transition-delay: 0.1s">
+      <span class="font-display-xl text-[48px] md:text-[64px] block mb-2 stat-counter" data-target="800">0</span>
+      <span class="font-label-mono text-label-mono text-outline-variant uppercase">Problems Solved</span>
+    </div>
+    <div class="reveal-up border-l border-outline-variant pl-6 py-4" style="transition-delay: 0.2s">
+      <span class="font-display-xl text-[48px] md:text-[64px] block mb-2">8.71%</span>
+      <span class="font-label-mono text-label-mono text-outline-variant uppercase">Top % LeetCode</span>
+    </div>
+    <div class="reveal-up border-l border-outline-variant pl-6 py-4" style="transition-delay: 0.3s">
+      <span class="font-display-xl text-[48px] md:text-[64px] block mb-2 stat-counter" data-target="1776">0</span>
+      <span class="font-label-mono text-label-mono text-outline-variant uppercase">Peak Rating</span>
+    </div>
+    <div class="reveal-up border-l border-outline-variant pl-6 py-4" style="transition-delay: 0.4s">
+      <span class="font-display-xl text-[48px] md:text-[64px] block mb-2">SIH</span>
+      <span class="font-label-mono text-label-mono text-outline-variant uppercase">2025 Team Leader</span>
+    </div>
+    <div class="reveal-up border-l border-outline-variant pl-6 py-4" style="transition-delay: 0.5s">
+      <span class="font-display-xl text-[48px] md:text-[64px] block mb-2">GDSC</span>
+      <span class="font-label-mono text-label-mono text-outline-variant uppercase">CP Mentor</span>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="min-h-screen py-section-gap px-margin-mobile md:px-margin-desktop flex flex-col justify-center" id="contact">
+  <div class="reveal-up">
+    <p class="font-label-mono text-label-mono text-outline-variant uppercase mb-4">Availability: Immediate</p>
+    <h2 class="font-display-xl text-[56px] md:text-[140px] leading-tight mb-stack-lg">LET'S CONNECT</h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mt-stack-lg reveal-up">
+    <div class="md:col-span-6">
+      <a class="font-headline-md hover:text-primary/60 transition-colors block mb-stack-md group" href="mailto:apoorvsaxena0108@gmail.com">
+        apoorvsaxena0108@gmail.com
+        <span class="material-symbols-outlined ml-2 translate-y-2 opacity-0 group-hover:opacity-100 transition-all">arrow_forward</span>
+      </a>
+    </div>
+    <div class="md:col-span-6 flex flex-col md:flex-row gap-stack-lg justify-end items-start md:items-center">
+      <a class="font-label-mono text-body-lg hover:text-primary transition-all border-b border-outline-variant" href="https://linkedin.com/in/apoorvsaxena08" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="font-label-mono text-body-lg hover:text-primary transition-all border-b border-outline-variant" href="https://github.com/Apoorv-Saxena08" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="font-label-mono text-body-lg hover:text-primary transition-all border-b border-outline-variant" href="https://leetcode.com/u/apoorvsaxena0108/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full py-stack-lg border-t border-outline-variant px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-stack-md">
+  <div class="font-label-mono text-label-mono text-primary">AS</div>
+  <div class="font-label-mono text-label-mono text-on-surface-variant/60">
+    © 2025 Apoorv Saxena — Built with purpose.
+  </div>
+  <div class="flex gap-4">
+    <span class="material-symbols-outlined text-outline-variant">terminal</span>
+    <span class="material-symbols-outlined text-outline-variant">code</span>
+    <span class="material-symbols-outlined text-outline-variant">psychology</span>
+  </div>
+</footer>
+
+<script>
+  // Magnetic Cursor
+  const dot = document.getElementById('cursor-dot');
+  const outline = document.getElementById('cursor-outline');
+
+  window.addEventListener('mousemove', (e) => {
+    dot.style.left = `${e.clientX}px`;
+    dot.style.top = `${e.clientY}px`;
+    outline.animate({ left: `${e.clientX}px`, top: `${e.clientY}px` }, { duration: 500, fill: "forwards" });
+  });
+
+  const interactables = document.querySelectorAll('a, button, .perspective-card');
+  interactables.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+      outline.style.backgroundColor = 'rgba(255,255,255,0.1)';
+      dot.style.width = '12px';
+      dot.style.height = '12px';
+    });
+    item.addEventListener('mouseleave', () => {
+      outline.style.transform = 'translate(-50%, -50%) scale(1)';
+      outline.style.backgroundColor = 'transparent';
+      dot.style.width = '8px';
+      dot.style.height = '8px';
+    });
+  });
+
+  // Hero Text Animation — preserved from original
+  window.addEventListener('load', () => {
+    document.body.classList.add('hero-loaded');
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        const counters = entry.target.querySelectorAll('.stat-counter');
+        counters.forEach(counter => {
+          const target = parseFloat(counter.getAttribute('data-target'));
+          const duration = 2000;
+          const increment = target / (duration / 16);
+          let current = 0;
+          const update = () => {
+            current += increment;
+            if (current < target) {
+              counter.textContent = target % 1 === 0 ? Math.round(current) : current.toFixed(2);
+              requestAnimationFrame(update);
+            } else {
+              counter.textContent = target % 1 === 0 ? target : target.toFixed(2);
+            }
+          };
+          update();
+        });
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+  // 3D Card Tilt
+  document.querySelectorAll('.perspective-card').forEach(card => {
+    const inner = card.querySelector('.card-inner');
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const rotateX = (y - rect.height / 2) / 10;
+      const rotateY = (rect.width / 2 - x) / 10;
+      inner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      inner.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
+    });
+  });
+
+  // GPA Counter
+  const gpaObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      const el = document.getElementById('gpa-counter');
+      let start = 0;
+      const target = 8.7;
+      const step = (target / 1500) * 16;
+      const interval = setInterval(() => {
+        start += step;
+        if (start >= target) { el.textContent = target.toFixed(1); clearInterval(interval); }
+        else { el.textContent = start.toFixed(1); }
+      }, 16);
+      gpaObserver.disconnect();
+    }
+  });
+  gpaObserver.observe(document.getElementById('about'));
+</script>
+
+</body></html>
