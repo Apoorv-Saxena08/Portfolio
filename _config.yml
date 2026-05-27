@@ -1,0 +1,7 @@
+# GitHub Pages Configuration
+title: Apoorv Saxena Portfolio
+description: Professional Portfolio Website
+theme: null
+plugins: []
+markdown: kramdown
+exclude: [.gitignore]
